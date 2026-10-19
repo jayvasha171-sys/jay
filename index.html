@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LKPD JavaScript | String & Number</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">JS<span>LAB</span></div>
+    <div class="nav-label">LEMBAR KERJA PESERTA DIDIK</div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="tag">✦ MODUL PEMBELAJARAN INTERAKTIF</div>
+      <h1>JavaScript <span>String & Number</span></h1>
+      <p>
+        Pelajari pengolahan teks, angka, dan operasi matematika
+        menggunakan JavaScript melalui aktivitas interaktif.
+      </p>
+      <div class="hero-info">
+        <span>📚 Informatika</span>
+        <span>💻 Pemrograman Web</span>
+        <span>⚡ Praktik Langsung</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">01</span> Identitas Peserta Didik</h2>
+      <div class="form-grid">
+        <div>
+            
+          <label for="nama">Nama Lengkap</label>
+          <input id="nama" type="text" placeholder="Masukkan nama kamu">
+        </div>
+        <div>
+          <label for="kelas">Kelas</label>
+          <input id="kelas" type="text" placeholder="Contoh: XI RPL 1">
+        </div>
+        <div>
+          <label for="tanggal">Tanggal</label>
+          <input id="tanggal" type="date">
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">02</span> Tujuan Pembelajaran</h2>
+      <p>Setelah menyelesaikan LKPD ini, peserta didik mampu:</p>
+      <ul class="check-list">
+        <li>Memahami tipe data String dan Number.</li>
+        <li>Menggunakan operator matematika JavaScript.</li>
+        <li>Mengolah teks dengan properti dan metode String.</li>
+        <li>Membuat program sederhana untuk menghitung nilai.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">03</span> Materi Singkat</h2>
+
+      <div class="concept-grid">
+        <article class="concept">
+          <div class="concept-icon">Aa</div>
+          <h3>String</h3>
+          <p>Tipe data untuk menyimpan teks atau kumpulan karakter.</p>
+          <pre><code>let nama = "Andi";
+console.log(nama);</code></pre>
+        </article>
+
+        <article class="concept">
+          <div class="concept-icon">123</div>
+          <h3>Number</h3>
+          <p>Tipe data untuk menyimpan angka, baik bilangan bulat maupun desimal.</p>
+          <pre><code>let harga = 15000;
+let jumlah = 2;
+console.log(harga * jumlah);</code></pre>
+        </article>
+      </div>
+
+      <h3 class="subheading">Metode String yang sering digunakan</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metode</th>
+              <th>Fungsi</th>
+              <th>Contoh</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.length</code></td>
+              <td>Menghitung jumlah karakter</td>
+              <td><code>"Halo".length</code> → 4</td>
+            </tr>
+            <tr>
+              <td><code>.toUpperCase()</code></td>
+              <td>Mengubah menjadi huruf besar</td>
+              <td><code>"halo".toUpperCase()</code></td>
+            </tr>
+            <tr>
+              <td><code>.toLowerCase()</code></td>
+              <td>Mengubah menjadi huruf kecil</td>
+              <td><code>"HALO".toLowerCase()</code></td>
+            </tr>
+            <tr>
+              <td><code>.trim()</code></td>
+              <td>Menghapus spasi di awal dan akhir</td>
+              <td><code>" halo ".trim()</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subheading">Operator matematika</h3>
+      <div class="operator-grid">
+        <div><code>+</code><span>Penjumlahan</span></div>
+        <div><code>-</code><span>Pengurangan</span></div>
+        <div><code>*</code><span>Perkalian</span></div>
+        <div><code>/</code><span>Pembagian</span></div>
+        <div><code>%</code><span>Sisa bagi</span></div>
+        <div><code>**</code><span>Pangkat</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">04</span> Aktivitas 1 — Mengenal String</h2>
+      <p>Perhatikan kode berikut, lalu jalankan simulasi.</p>
+
+      <pre><code>let nama = "  budi santoso  ";
+console.log(nama.trim());
+console.log(nama.trim().toUpperCase());
+console.log(nama.trim().length);</code></pre>
+
+      <div class="interactive-box">
+        <label for="teks">Masukkan teks</label>
+        <input id="teks" type="text" value="  budi santoso  ">
+        <button onclick="prosesString()">Jalankan Program ↗</button>
+        <div id="hasilString" class="output">Hasil program akan muncul di sini.</div>
+      </div>
+
+      <div class="question">
+        <label for="jawaban1">Pertanyaan: Apa fungsi trim()?</label>
+        <textarea id="jawaban1" rows="2" placeholder="Tuliskan jawabanmu..."></textarea>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">05</span> Aktivitas 2 — Operasi Number</h2>
+      <p>Hitung jumlah harga barang berdasarkan harga satuan dan jumlah barang.</p>
+
+      <div class="form-grid">
+        <div>
+          <label for="harga">Harga Satuan (Rp)</label>
+          <input id="harga" type="number" min="0" value="15000">
+        </div>
+        <div>
+          <label for="jumlah">Jumlah Barang</label>
+          <input id="jumlah" type="number" min="0" value="3">
+        </div>
+      </div>
+
+      <button onclick="hitungTotal()">Hitung Total ↗</button>
+      <div id="hasilTotal" class="result-panel">
+        <span>Total Pembelian</span>
+        <strong>Rp0</strong>
+      </div>
+
+      <div class="question">
+        <label for="jawaban2">Pertanyaan: Operator apa yang digunakan untuk perkalian?</label>
+        <textarea id="jawaban2" rows="2" placeholder="Tuliskan jawabanmu..."></textarea>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">06</span> Aktivitas 3 — Rata-rata Nilai</h2>
+      <p>Buat program sederhana untuk menghitung rata-rata tiga nilai siswa.</p>
+
+      <div class="form-grid three">
+        <div>
+          <label for="nilai1">Nilai 1</label>
+          <input id="nilai1" type="number" min="0" max="100" value="80">
+        </div>
+        <div>
+          <label for="nilai2">Nilai 2</label>
+          <input id="nilai2" type="number" min="0" max="100" value="90">
+        </div>
+        <div>
+          <label for="nilai3">Nilai 3</label>
+          <input id="nilai3" type="number" min="0" max="100" value="85">
+        </div>
+      </div>
+
+      <pre><code>let rataRata = (nilai1 + nilai2 + nilai3) / 3;</code></pre>
+
+      <button onclick="hitungRataRata()">Hitung Rata-rata ↗</button>
+      <div id="hasilRata" class="output">Nilai rata-rata akan ditampilkan di sini.</div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">07</span> Aktivitas 4 — Simulasi Kasir</h2>
+      <p>Masukkan nama barang, harga, dan jumlah untuk membuat struk sederhana.</p>
+
+      <div class="form-grid">
+        <div>
+          <label for="barang">Nama Barang</label>
+          <input id="barang" type="text" placeholder="Contoh: Buku Tulis">
+        </div>
+        <div>
+          <label for="hargaKasir">Harga Barang (Rp)</label>
+          <input id="hargaKasir" type="number" min="0" placeholder="10000">
+        </div>
+        <div>
+          <label for="jumlahKasir">Jumlah</label>
+          <input id="jumlahKasir" type="number" min="1" value="1">
+        </div>
+        <div>
+          <label for="uangBayar">Uang Dibayar (Rp)</label>
+          <input id="uangBayar" type="number" min="0" placeholder="20000">
+        </div>
+      </div>
+
+      <button onclick="buatStruk()">Buat Struk ↗</button>
+      <div id="struk" class="receipt">
+        <div class="receipt-title">JS LAB STORE</div>
+        <p>Struk transaksi akan ditampilkan di sini.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">08</span> Tanya Jawab</h2>
+
+      <div class="question">
+        <label for="q1">1. Apa perbedaan String dan Number?</label>
+        <textarea id="q1" rows="2" placeholder="Tuliskan jawabanmu..."></textarea>
+      </div>
+
+      <div class="question">
+        <label for="q2">2. Apa hasil dari 10 + 5 * 2?</label>
+        <textarea id="q2" rows="2" placeholder="Tuliskan jawabanmu..."></textarea>
+      </div>
+
+      <div class="question">
+        <label for="q3">3. Mengapa input dari prompt() perlu dikonversi menjadi Number?</label>
+        <textarea id="q3" rows="2" placeholder="Tuliskan jawabanmu..."></textarea>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">09</span> Refleksi 3–2–1</h2>
+      <div class="question">
+        <label for="refleksi1">3 hal yang saya pelajari</label>
+        <textarea id="refleksi1" rows="3" placeholder="Tuliskan tiga hal..."></textarea>
+      </div>
+      <div class="question">
+        <label for="refleksi2">2 hal yang menarik</label>
+        <textarea id="refleksi2" rows="2" placeholder="Tuliskan dua hal..."></textarea>
+      </div>
+      <div class="question">
+        <label for="refleksi3">1 hal yang ingin saya pelajari lebih lanjut</label>
+        <textarea id="refleksi3" rows="2" placeholder="Tuliskan satu hal..."></textarea>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2><span class="number">10</span> Penilaian Diri</h2>
+      <p>Centang pernyataan yang sudah kamu kuasai.</p>
+
+      <label class="check-row">
+        <input type="checkbox"> Saya memahami tipe data String.
+      </label>
+      <label class="check-row">
+        <input type="checkbox"> Saya memahami tipe data Number.
+      </label>
+      <label class="check-row">
+        <input type="checkbox"> Saya dapat menggunakan operator matematika.
+      </label>
+      <label class="check-row">
+        <input type="checkbox"> Saya dapat membuat program sederhana.
+      </label>
+
+      <button class="secondary" onclick="window.print()">Cetak / Simpan PDF ⤓</button>
+    </section>
+
+    <footer>
+      <div class="logo">JS<span>LAB</span></div>
+      <p>Belajar kode, bangun logika, ciptakan solusi.</p>
+      <small>LKPD Informatika • JavaScript String & Number</small>
+    </footer>
+
+  </main>
+
+  <script>
+    const rupiah = angka =>
+      new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        maximumFractionDigits: 0
+      }).format(angka);
+
+    function prosesString() {
+      const teks = document.getElementById("teks").value;
+      const bersih = teks.trim();
+
+      document.getElementById("hasilString").textContent =
+        "Teks asli: [" + teks + "]\n" +
+        "trim(): " + bersih + "\n" +
+        "toUpperCase(): " + bersih.toUpperCase() + "\n" +
+        "toLowerCase(): " + bersih.toLowerCase() + "\n" +
+        "Jumlah karakter: " + bersih.length;
+    }
+
+    function hitungTotal() {
+      const harga = Number(document.getElementById("harga").value);
+      const jumlah = Number(document.getElementById("jumlah").value);
+      const hasil = document.getElementById("hasilTotal");
+
+      if (
+        document.getElementById("harga").value === "" ||
+        document.getElementById("jumlah").value === "" ||
+        harga < 0 || jumlah < 0
+      ) {
+        hasil.querySelector("strong").textContent = "Input tidak valid";
+        return;
+      }
+
+      hasil.querySelector("strong").textContent = rupiah(harga * jumlah);
+    }
+
+    function hitungRataRata() {
+      const ids = ["nilai1", "nilai2", "nilai3"];
+      const nilai = ids.map(id => Number(document.getElementById(id).value));
+      const hasil = document.getElementById("hasilRata");
+
+      const valid = ids.every((id, i) =>
+        document.getElementById(id).value !== "" &&
+        Number.isFinite(nilai[i]) &&
+        nilai[i] >= 0 &&
+        nilai[i] <= 100
+      );
+
+      if (!valid) {
+        hasil.textContent = "Masukkan tiga nilai antara 0 dan 100.";
+        return;
+      }
+
+      const rata = nilai.reduce((total, n) => total + n, 0) / nilai.length;
+
+      hasil.textContent =
+        "Rata-rata: " + rata.toFixed(2) +
+        " | Keterangan: " +
+        (rata >= 75 ? "Tuntas" : "Perlu belajar lagi");
+    }
+
+    function buatStruk() {
+      const barang = document.getElementById("barang").value.trim();
+      const hargaInput = document.getElementById("hargaKasir");
+      const jumlahInput = document.getElementById("jumlahKasir");
+      const bayarInput = document.getElementById("uangBayar");
+
+      const harga = Number(hargaInput.value);
+      const jumlah = Number(jumlahInput.value);
+      const bayar = Number(bayarInput.value);
+      const struk = document.getElementById("struk");
+
+      if (
+        !barang ||
+        hargaInput.value === "" ||
+        jumlahInput.value === "" ||
+        bayarInput.value === "" ||
+        !Number.isFinite(harga) ||
+        !Number.isInteger(jumlah) ||
+        !Number.isFinite(bayar) ||
+        harga < 0 || jumlah < 1 || bayar < 0
+      ) {
+        struk.textContent =
+          "Periksa kembali nama barang, harga, jumlah, dan uang pembayaran.";
+        return;
+      }
+
+      const total = harga * jumlah;
+
+      if (!Number.isFinite(total)) {
+        struk.textContent = "Total transaksi terlalu besar.";
+        return;
+      }
+
+      if (bayar < total) {
+        struk.textContent =
+          "Uang pembayaran kurang " + rupiah(total - bayar) + ".";
+        return;
+      }
+
+      const judul = document.createElement("div");
+      judul.className = "receipt-title";
+      judul.textContent = "JS LAB STORE";
+
+      const nama = document.createElement("p");
+      nama.textContent = "Barang: " + barang;
+
+      const rincian = document.createElement("p");
+      rincian.textContent =
+        "Harga: " + rupiah(harga) +
+        " × " + jumlah + " = " + rupiah(total);
+
+      const pembayaran = document.createElement("p");
+      pembayaran.textContent = "Dibayar: " + rupiah(bayar);
+
+      const kembalian = document.createElement("p");
+      kembalian.className = "receipt-total";
+      kembalian.textContent = "Kembalian: " + rupiah(bayar - total);
+
+      struk.replaceChildren(
+        judul, nama, rincian, pembayaran, kembalian
+      );
+    }
+
+    document.getElementById("tanggal").value =
+      new Date().toLocaleDateString("en-CA");
+  </script>
+
+</body>
+</html>
